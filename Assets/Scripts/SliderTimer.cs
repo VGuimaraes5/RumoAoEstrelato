@@ -6,19 +6,30 @@ using UnityEngine.UI;
 public class SliderTimer : MonoBehaviour
 {
     public Slider slider;
-    public Text returnText;
-    public Text instructionText;
-    public float gameTime;
+    private RectTransform sliderTransform;
 
+    public GameObject target;
+    private float targetStartPosition;
+    private float targetWidth = 50.0f;
+    private float targetMinStart = 200.0f;
+    private float targetMaxStart = 350.0f;
+
+    public Text instructionText;
+    public Text returnText;
+
+    [SerializeField]
+    private Dificult dificult;
+
+    public float gameTime;
     private bool stopTimer;
     private bool startTimer;
-
-    private float minTime = 2.39f;
-    private float maxTime = 2.53f;
-
+    
 
     void Start()
     {
+        sliderTransform = slider.GetComponent<RectTransform>();
+        DefineTarget();
+        targetWidth /= (int)dificult;
         stopTimer = false;
         startTimer = false;
         slider.maxValue = gameTime;
@@ -28,7 +39,7 @@ public class SliderTimer : MonoBehaviour
 
     private void Update()
     {
-        hitSpaceAction();
+        HitSpaceAction();
     }
 
 
@@ -38,16 +49,16 @@ public class SliderTimer : MonoBehaviour
         {
             if (stopTimer)
             {
-                verifyResult();
+                VerifyResult();
             }
             else
             {
-                updadeSlider();
+                UpdadeSlider();
             }
         }
     }
 
-    void hitSpaceAction()
+    void HitSpaceAction()
     {
         if (Input.GetKeyDown("space"))
         {
@@ -63,14 +74,15 @@ public class SliderTimer : MonoBehaviour
             } 
             else if (startTimer && stopTimer)
             {
-                resetTimer();
+                ResetTimer();
             }
         }
     }
 
-    void verifyResult()
+    void VerifyResult()
     {
-        if (slider.value >= minTime && slider.value <= maxTime)
+        float pointerPosition = (slider.value * sliderTransform.sizeDelta.x) / slider.maxValue;
+        if (pointerPosition >= targetStartPosition && pointerPosition <= (targetStartPosition + targetWidth))
         {
             returnText.text = "Acertô miseravi!";
         }
@@ -80,7 +92,7 @@ public class SliderTimer : MonoBehaviour
         }
     }
 
-    void updadeSlider()
+    void UpdadeSlider()
     {
         if (!stopTimer)
         {
@@ -93,12 +105,20 @@ public class SliderTimer : MonoBehaviour
         }
     }
 
-    void resetTimer()
+    void ResetTimer()
     {
         slider.value = 0.0f;
         stopTimer = false;
         startTimer = false;
         returnText.text = "";
         instructionText.text = "Precione ESPAÇO para iniciar!";
+    }
+
+    void DefineTarget()
+    {
+        targetStartPosition = Random.Range(targetMinStart, targetMaxStart);
+
+        target.transform.localScale = new Vector3(target.transform.localScale.x / (int)dificult, 1, 1);
+        target.transform.localPosition = new Vector3(targetStartPosition, 0, 0);
     }
 }
