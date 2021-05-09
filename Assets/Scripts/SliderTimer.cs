@@ -23,7 +23,13 @@ public class SliderTimer : MonoBehaviour
     public float gameTime;
     private bool stopTimer;
     private bool startTimer;
-    
+    private bool result;
+
+    [SerializeField]
+    private string nextScene;
+    [SerializeField]
+    private SceneLoader sceneLoader;
+
 
     void Start()
     {
@@ -49,7 +55,7 @@ public class SliderTimer : MonoBehaviour
         {
             if (stopTimer)
             {
-                VerifyResult();
+                StartCoroutine(FinishLevel());
             }
             else
             {
@@ -70,25 +76,7 @@ public class SliderTimer : MonoBehaviour
             else if (startTimer && !stopTimer)
             {
                 stopTimer = true;
-                instructionText.text = "Precione ESPAÇO para resetar!";
             } 
-            else if (startTimer && stopTimer)
-            {
-                ResetTimer();
-            }
-        }
-    }
-
-    void VerifyResult()
-    {
-        float pointerPosition = (slider.value * sliderTransform.sizeDelta.x) / slider.maxValue;
-        if (pointerPosition >= targetStartPosition && pointerPosition <= (targetStartPosition + targetWidth))
-        {
-            returnText.text = "Acertô miseravi!";
-        }
-        else
-        {
-            returnText.text = "Verrgonha da profissom!";
         }
     }
 
@@ -105,20 +93,30 @@ public class SliderTimer : MonoBehaviour
         }
     }
 
-    void ResetTimer()
-    {
-        slider.value = 0.0f;
-        stopTimer = false;
-        startTimer = false;
-        returnText.text = "";
-        instructionText.text = "Precione ESPAÇO para iniciar!";
-    }
-
     void DefineTarget()
     {
         targetStartPosition = Random.Range(targetMinStart, targetMaxStart);
 
         target.transform.localScale = new Vector3(target.transform.localScale.x / (int)dificult, 1, 1);
         target.transform.localPosition = new Vector3(targetStartPosition, 0, 0);
+    }
+
+    IEnumerator FinishLevel()
+    {
+        VerifyResult();
+        SaveResult();
+        yield return new WaitForSeconds(2f);
+        sceneLoader.Transition(nextScene);
+    }
+
+    void VerifyResult()
+    {
+        float pointerPosition = (slider.value * sliderTransform.sizeDelta.x) / slider.maxValue;
+        result = (pointerPosition >= targetStartPosition && pointerPosition <= (targetStartPosition + targetWidth));
+    }
+
+    void SaveResult()
+    {
+        ResultStorage.lastResult = result;
     }
 }
