@@ -5,22 +5,27 @@ using UnityEngine.UI;
 
 public class SliderTimer : MonoBehaviour
 {
-    public Slider slider;
+    [SerializeField]
+    private Slider slider;
     private RectTransform sliderTransform;
 
-    public GameObject target;
+    [SerializeField]
+    private GameObject target;
     private float targetStartPosition;
     private float targetWidth = 50.0f;
     private float targetMinStart = 200.0f;
     private float targetMaxStart = 350.0f;
 
-    public Text instructionText;
-    public Text returnText;
+    [SerializeField]
+    private Text instructionText;
+    [SerializeField]
+    private Text returnText;
 
     [SerializeField]
     private Dificult dificult;
 
-    public float gameTime;
+    [SerializeField]
+    private float gameTime;
     private bool stopTimer;
     private bool startTimer;
     private bool result;
