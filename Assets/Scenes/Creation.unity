@@ -528,6 +528,42 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1444017477}
     m_Modifications:
+    - target: {fileID: 2425601659099698156, guid: 8956529cc41ebc2458046c528717d748, type: 3}
+      propertyPath: m_Text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2425601659099698156, guid: 8956529cc41ebc2458046c528717d748, type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 230
+      objectReference: {fileID: 0}
+    - target: {fileID: 2425601659099698156, guid: 8956529cc41ebc2458046c528717d748, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2425601659099698156, guid: 8956529cc41ebc2458046c528717d748, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 2425601659099698159, guid: 8956529cc41ebc2458046c528717d748, type: 3}
+      propertyPath: m_Name
+      value: CountdownText
+      objectReference: {fileID: 0}
+    - target: {fileID: 2425601659099698162, guid: 8956529cc41ebc2458046c528717d748, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 2425601659099698162, guid: 8956529cc41ebc2458046c528717d748, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 99.0933
+      objectReference: {fileID: 0}
+    - target: {fileID: 2425601659099698162, guid: 8956529cc41ebc2458046c528717d748, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.00048828125
+      objectReference: {fileID: 0}
+    - target: {fileID: 2425601659099698162, guid: 8956529cc41ebc2458046c528717d748, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 50.7
+      objectReference: {fileID: 0}
     - target: {fileID: 2425601659313688808, guid: 8956529cc41ebc2458046c528717d748, type: 3}
       propertyPath: m_Name
       value: SliderTrigger
@@ -631,6 +667,14 @@ PrefabInstance:
     - target: {fileID: 2425601659403763833, guid: 8956529cc41ebc2458046c528717d748, type: 3}
       propertyPath: m_AnchorMin.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2425601660247953858, guid: 8956529cc41ebc2458046c528717d748, type: 3}
+      propertyPath: dificult
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2425601660247953858, guid: 8956529cc41ebc2458046c528717d748, type: 3}
+      propertyPath: velocity
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2425601660247953858, guid: 8956529cc41ebc2458046c528717d748, type: 3}
       propertyPath: nextScene

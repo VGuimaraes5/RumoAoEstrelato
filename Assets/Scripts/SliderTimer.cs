@@ -17,14 +17,13 @@ public class SliderTimer : MonoBehaviour
     private float targetMaxStart = 350.0f;
 
     [SerializeField]
-    private Text instructionText;
-    [SerializeField]
     private Text returnText;
 
     [SerializeField]
     private Dificult dificult;
-
     [SerializeField]
+    private Velocity velocity;
+
     private float gameTime;
     private bool stopTimer;
     private bool startTimer;
@@ -36,6 +35,11 @@ public class SliderTimer : MonoBehaviour
     private SceneLoader sceneLoader;
 
 
+    [SerializeField]
+    private Text countdownText;
+    private float countdownTime = 5;
+    
+
     void Start()
     {
         sliderTransform = slider.GetComponent<RectTransform>();
@@ -43,14 +47,28 @@ public class SliderTimer : MonoBehaviour
         targetWidth /= (int)dificult;
         stopTimer = false;
         startTimer = false;
-        slider.maxValue = gameTime;
         slider.value = 0.0f;
+
+        switch (velocity)
+        {
+            case Velocity.SLOW:
+                gameTime = 1.6f;
+                break;
+            case Velocity.MEDIUM:
+                gameTime = 1.2f;
+                break;
+            case Velocity.FAST:
+                gameTime = 0.8f;
+                break;
+        }
+        slider.maxValue = gameTime;
     }
 
 
     private void Update()
     {
         HitSpaceAction();
+        Countdown();
     }
 
 
@@ -73,15 +91,10 @@ public class SliderTimer : MonoBehaviour
     {
         if (Input.GetKeyDown("space"))
         {
-            if (!startTimer)
-            {
-                startTimer = true;
-                instructionText.text = "Precione ESPAÇO para parar!";
-            }
-            else if (startTimer && !stopTimer)
+            if (startTimer && !stopTimer)
             {
                 stopTimer = true;
-            } 
+            }
         }
     }
 
@@ -123,5 +136,22 @@ public class SliderTimer : MonoBehaviour
     void SaveResult()
     {
         ResultStorage.lastResult = result;
+    }
+
+    void Countdown()
+    {
+        if (countdownTime >= 0)
+        {
+            countdownTime -= Time.deltaTime;
+            if (countdownTime < 4)
+            {
+                countdownText.text = Mathf.Floor(countdownTime).ToString("N0");
+            }
+        }
+        else
+        {
+            startTimer = true;
+            countdownText.text = "Precione ESPAÇO para parar!";
+        }
     }
 }
