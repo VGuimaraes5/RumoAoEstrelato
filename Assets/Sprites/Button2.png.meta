@@ -1,7 +1,19 @@
 fileFormatVersion: 2
-guid: 9818a35e7cc038349bc6381ba6f724be
+guid: bbc68d6fb22c2b142ab808e186ccb172
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 2986095105091660353
+    second: Button2_0
+  - first:
+      213: 8616442935391326041
+    second: Button2_1
+  - first:
+      213: -6123735545411238074
+    second: Button2_2
+  - first:
+      213: 820772204878148113
+    second: Button2_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +53,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -89,11 +101,95 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Button2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 458.5
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14a65845dadb07920800000000000000
+      internalID: 2986095105091660353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button2_1
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 0
+        width: 458.5
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95f8c67a231c39770800000000000000
+      internalID: 8616442935391326041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button2_2
+      rect:
+        serializedVersion: 2
+        x: 916
+        y: 0
+        width: 458.5
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 647845567fe140ba0800000000000000
+      internalID: -6123735545411238074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button2_3
+      rect:
+        serializedVersion: 2
+        x: 1374
+        y: 0
+        width: 458.5
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 112b641c8f7f36b00800000000000000
+      internalID: 820772204878148113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: f880c8614a71e464da5656d26183b051
     internalID: 0
     vertices: []
     indices: 
