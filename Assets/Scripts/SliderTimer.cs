@@ -6,6 +6,9 @@ using UnityEngine.UI;
 public class SliderTimer : MonoBehaviour
 {
     [SerializeField]
+    private string sceneName;
+
+    [SerializeField]
     private Slider slider;
     private RectTransform sliderTransform;
 
@@ -42,6 +45,8 @@ public class SliderTimer : MonoBehaviour
 
     void Start()
     {
+        DefinirDificuldade();
+
         sliderTransform = slider.GetComponent<RectTransform>();
         DefineTarget();
         targetWidth /= (int)dificult;
@@ -136,6 +141,12 @@ public class SliderTimer : MonoBehaviour
     void SaveResult()
     {
         ResultStorage.lastResult = result;
+        switch (sceneName)
+        {
+            case "cozinha":
+                ResultStorage.resultCozinha = result;
+                break;
+        }
     }
 
     void Countdown()
@@ -152,6 +163,25 @@ public class SliderTimer : MonoBehaviour
         {
             startTimer = true;
             countdownText.text = "Precione ESPAÇO para parar!";
+        }
+    }
+
+    void DefinirDificuldade()
+    {
+        switch (sceneName)
+        {
+            case "cozinha":
+                if (ResultStorage.escolhaCozinha == Choises.GOOD)
+                {
+                    dificult = Dificult.MEDIUM;
+                    velocity = Velocity.MEDIUM;
+                }
+                else if (ResultStorage.escolhaCozinha == Choises.BAD)
+                {
+                    dificult = Dificult.EASY;
+                    velocity = Velocity.SLOW;
+                }
+                break;
         }
     }
 }
