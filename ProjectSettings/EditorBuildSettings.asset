@@ -18,6 +18,18 @@ EditorBuildSettings:
     path: Assets/Scenes/Dialogues/Ato2_2.unity
     guid: 2e69cf7e520f5f34a84802aa4dd598da
   - enabled: 1
+    path: Assets/Scenes/Dialogues/Ato2_3.unity
+    guid: a1709e974d344754c8263466dbfde60e
+  - enabled: 1
+    path: Assets/Scenes/Dialogues/Ato2_4.unity
+    guid: e9f82e0be3e793543a751203963fb441
+  - enabled: 1
+    path: Assets/Scenes/Dialogues/Ato2_5.unity
+    guid: c083c2e31f3c7a943975bad3ea332f4f
+  - enabled: 1
+    path: Assets/Scenes/Dialogues/Ato2_6.unity
+    guid: f8fd2e88c28c7884fb00ec096f7ce485
+  - enabled: 1
     path: Assets/Scenes/Creation.unity
     guid: 77d30cff7382ff64db7c06de8a613441
   - enabled: 1

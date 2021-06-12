@@ -6,11 +6,12 @@ using UnityEngine.UI;
 public class ShowResult : MonoBehaviour
 {
     [SerializeField]
-    private Text resultText;
+    private Fungus.Flowchart flowchart;
 
     void Start()
     {
-        resultText.text = ResultStorage.lastResult ? "Acertô miseravi!" : "Verrgonha da profissôm!";
+        flowchart.SetIntegerVariable("Choise", (int)ResultStorage.lastChoise);
+        flowchart.SetBooleanVariable("Result", ResultStorage.lastResult);
     }
 
 }

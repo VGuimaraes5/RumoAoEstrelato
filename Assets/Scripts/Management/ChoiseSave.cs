@@ -22,11 +22,11 @@ public class ChoiseSave : MonoBehaviour
                     ResultStorage.lastChoise = (Choises)flowchart.GetIntegerVariable("Choise");
                     break;
                 case "escolhaCarregamento":
-                    ResultStorage.escolhaCozinha = (Choises)flowchart.GetIntegerVariable("Choise");
+                    ResultStorage.escolhaCarregamento = (Choises)flowchart.GetIntegerVariable("Choise");
                     ResultStorage.lastChoise = (Choises)flowchart.GetIntegerVariable("Choise");
                     break;
                 case "escolhaAtendimento":
-                    ResultStorage.escolhaCozinha = (Choises)flowchart.GetIntegerVariable("Choise");
+                    ResultStorage.escolhaAtendimento = (Choises)flowchart.GetIntegerVariable("Choise");
                     ResultStorage.lastChoise = (Choises)flowchart.GetIntegerVariable("Choise");
                     break;
             }

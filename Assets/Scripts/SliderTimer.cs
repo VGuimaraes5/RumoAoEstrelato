@@ -182,6 +182,18 @@ public class SliderTimer : MonoBehaviour
                     velocity = Velocity.SLOW;
                 }
                 break;
+            case "carregamento":
+                if (ResultStorage.escolhaCarregamento == Choises.GOOD)
+                {
+                    dificult = Dificult.MEDIUM;
+                    velocity = Velocity.FAST;
+                }
+                else if (ResultStorage.escolhaCarregamento == Choises.BAD)
+                {
+                    dificult = Dificult.MEDIUM;
+                    velocity = Velocity.MEDIUM;
+                }
+                break;
         }
     }
 }
