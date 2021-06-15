@@ -146,6 +146,12 @@ public class SliderTimer : MonoBehaviour
             case "cozinha":
                 ResultStorage.resultCozinha = result;
                 break;
+            case "carregamento":
+                ResultStorage.resultCarregamento = result;
+                break;
+            case "atendimento":
+                ResultStorage.resultAtendimento = result;
+                break;
         }
     }
 
@@ -173,13 +179,13 @@ public class SliderTimer : MonoBehaviour
             case "cozinha":
                 if (ResultStorage.escolhaCozinha == Choises.GOOD)
                 {
-                    dificult = Dificult.MEDIUM;
-                    velocity = Velocity.MEDIUM;
+                    dificult = Dificult.EASY;
+                    velocity = Velocity.FAST;
                 }
                 else if (ResultStorage.escolhaCozinha == Choises.BAD)
                 {
                     dificult = Dificult.EASY;
-                    velocity = Velocity.SLOW;
+                    velocity = Velocity.MEDIUM;
                 }
                 break;
             case "carregamento":
@@ -191,6 +197,18 @@ public class SliderTimer : MonoBehaviour
                 else if (ResultStorage.escolhaCarregamento == Choises.BAD)
                 {
                     dificult = Dificult.MEDIUM;
+                    velocity = Velocity.MEDIUM;
+                }
+                break;
+            case "atendimento":
+                if (ResultStorage.escolhaAtendimento == Choises.GOOD)
+                {
+                    dificult = Dificult.HARD;
+                    velocity = Velocity.FAST;
+                }
+                else if (ResultStorage.escolhaAtendimento == Choises.BAD)
+                {
+                    dificult = Dificult.HARD;
                     velocity = Velocity.MEDIUM;
                 }
                 break;

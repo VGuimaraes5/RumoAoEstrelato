@@ -3,33 +3,31 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEditor;
 
 public class Menu : MonoBehaviour
 {
-    public string scene;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [SerializeField]
+    private SceneLoader sceneLoader;
 
     public void StartGame()
     {
-        SceneManager.LoadScene(scene); //FUNÇÃO VINICIUS
+        StartCoroutine(StartAto1("Ato1_0"));
+    }
+
+    public void ShowCredits()
+    {
+        sceneLoader.Transition("Credits");
     }
 
     public void QuitGame()
     {
-        //Editor Unity
-        UnityEditor.EditorApplication.isPlaying = false;
-        //Jogo Compilado
-        //Application.Quit();
+        Application.Quit();
+    }
+
+    IEnumerator StartAto1(string scene)
+    {
+        yield return new WaitForSeconds(2f);
+        sceneLoader.Transition(scene);
     }
 }

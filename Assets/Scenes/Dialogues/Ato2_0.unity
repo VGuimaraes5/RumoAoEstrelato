@@ -490,6 +490,88 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1641852718
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1641852720}
+  - component: {fileID: 1641852719}
+  m_Layer: 0
+  m_Name: interiorRestauranteAtualizado
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &1641852719
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1641852718}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 6929292cb8c5b204899eb3e6a2da4ade, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 19.28, y: 10.8}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1641852720
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1641852718}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 1.1, y: 1.1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1685330669
 GameObject:
   m_ObjectHideFlags: 0
@@ -877,7 +959,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 1
   indentLevel: 0
-  storyText: "Bom dia gentche. \nAcho que todos me conhecem. \nSou o chef Eric Jacquin."
+  storyText: "Bom dia {i}gentche{/i}. \nAcho que todos me conhecem. \nSou o chef
+    Eric Jacquin."
   description: 
   character: {fileID: 2045094775}
   portrait: {fileID: 0}
@@ -977,7 +1060,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 1799894885}
   selectedCommands:
-  - {fileID: 1799894901}
+  - {fileID: 1799894889}
   variables:
   - {fileID: 1799894900}
   description: 
@@ -1154,8 +1237,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 13
   indentLevel: 0
-  storyText: "Bom, primeire eu gostaria de ver como s\xE3o os pratos que voc\xEAs
-    preparam aqui. \nEu preciso saber melhor com o que estou lidande. Certo?"
+  storyText: "Bom, {i}primeire{/i} eu gostaria de ver como s\xE3o os pratos que voc\xEAs
+    preparam aqui. \nEu preciso saber melhor com o que estou {i}lidande{/i}. Certo?"
   description: 
   character: {fileID: 2045094775}
   portrait: {fileID: 0}
@@ -1209,7 +1292,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 11
   indentLevel: 0
-  storyText: "Isso \xE9 o que eu verei n\xE3o \xE9 mesme?"
+  storyText: "Isso \xE9 o que eu verei n\xE3o \xE9 {i}mesme{/i}?"
   description: 
   character: {fileID: 2045094775}
   portrait: {fileID: 0}
@@ -1263,7 +1346,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 9
   indentLevel: 0
-  storyText: "E um dos objetivos de voc\xEAs \xE9 conseguir uma estrele Michelin,
+  storyText: "E um dos objetivos de voc\xEAs \xE9 conseguir uma {i}estrele{/i} Michelin,
     certo Chef."
   description: 
   character: {fileID: 2045094775}
@@ -1318,8 +1401,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 7
   indentLevel: 0
-  storyText: "Chegou ao meu conhecimenta que voc\xEAs tem aqui um restaurante de
-    cozinhe francese, sob a lideran\xE7a do chef Gerv\xE1sio."
+  storyText: "Chegou ao meu {i}conhecimenta{/i} que voc\xEAs tem aqui um restaurante
+    de {i}cozinhe francese{/i}, sob a lideran\xE7a do chef Gerv\xE1sio."
   description: 
   character: {fileID: 2045094775}
   portrait: {fileID: 0}
