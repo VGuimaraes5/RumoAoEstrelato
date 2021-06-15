@@ -58,7 +58,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -364,11 +364,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97819bcbf895d194090a9f132dc9990b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneName: 
   slider: {fileID: 2425601659313688814}
   target: {fileID: 2425601659945793670}
   returnText: {fileID: 0}
   dificult: 1
-  gameTime: 1.5
+  velocity: 0
   nextScene: 
   sceneLoader: {fileID: 0}
   countdownText: {fileID: 2425601659099698156}

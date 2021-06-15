@@ -6,6 +6,9 @@ using UnityEngine.UI;
 public class SliderTimer : MonoBehaviour
 {
     [SerializeField]
+    private string sceneName;
+
+    [SerializeField]
     private Slider slider;
     private RectTransform sliderTransform;
 
@@ -42,6 +45,8 @@ public class SliderTimer : MonoBehaviour
 
     void Start()
     {
+        DefinirDificuldade();
+
         sliderTransform = slider.GetComponent<RectTransform>();
         DefineTarget();
         targetWidth /= (int)dificult;
@@ -136,6 +141,18 @@ public class SliderTimer : MonoBehaviour
     void SaveResult()
     {
         ResultStorage.lastResult = result;
+        switch (sceneName)
+        {
+            case "cozinha":
+                ResultStorage.resultCozinha = result;
+                break;
+            case "carregamento":
+                ResultStorage.resultCarregamento = result;
+                break;
+            case "atendimento":
+                ResultStorage.resultAtendimento = result;
+                break;
+        }
     }
 
     void Countdown()
@@ -152,6 +169,49 @@ public class SliderTimer : MonoBehaviour
         {
             startTimer = true;
             countdownText.text = "Precione ESPAÇO para parar!";
+        }
+    }
+
+    void DefinirDificuldade()
+    {
+        switch (sceneName)
+        {
+            case "cozinha":
+                if (ResultStorage.escolhaCozinha == Choises.GOOD)
+                {
+                    dificult = Dificult.EASY;
+                    velocity = Velocity.FAST;
+                }
+                else if (ResultStorage.escolhaCozinha == Choises.BAD)
+                {
+                    dificult = Dificult.EASY;
+                    velocity = Velocity.MEDIUM;
+                }
+                break;
+            case "carregamento":
+                if (ResultStorage.escolhaCarregamento == Choises.GOOD)
+                {
+                    dificult = Dificult.MEDIUM;
+                    velocity = Velocity.FAST;
+                }
+                else if (ResultStorage.escolhaCarregamento == Choises.BAD)
+                {
+                    dificult = Dificult.MEDIUM;
+                    velocity = Velocity.MEDIUM;
+                }
+                break;
+            case "atendimento":
+                if (ResultStorage.escolhaAtendimento == Choises.GOOD)
+                {
+                    dificult = Dificult.HARD;
+                    velocity = Velocity.FAST;
+                }
+                else if (ResultStorage.escolhaAtendimento == Choises.BAD)
+                {
+                    dificult = Dificult.HARD;
+                    velocity = Velocity.MEDIUM;
+                }
+                break;
         }
     }
 }
