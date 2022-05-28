@@ -443,8 +443,7 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 1269995708}
-  selectedCommands:
-  - {fileID: 1269995739}
+  selectedCommands: []
   variables:
   - {fileID: 1269995706}
   - {fileID: 1269995705}
@@ -1690,7 +1689,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 22106912}
   replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: 1f0584cc16da27b42b290594c973911f, type: 3}
+  portrait: {fileID: 21300000, guid: f1b2ba28926072d4ea968c165c56d5d5, type: 3}
   offset: 0
   fromPosition: {fileID: 0}
   toPosition: {fileID: 1888430123}

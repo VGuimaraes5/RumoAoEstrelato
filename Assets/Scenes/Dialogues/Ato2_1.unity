@@ -420,7 +420,8 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 949209766}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 949209768}
   variables:
   - {fileID: 949209764}
   - {fileID: 949209779}
@@ -529,7 +530,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 1881296533}
   replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: 65cda1e3dd1ec8c4bb828adc5bb06c7d, type: 3}
+  portrait: {fileID: 21300000, guid: af04bc36f74349648a8f514c6bd1182a, type: 3}
   offset: 0
   fromPosition: {fileID: 1902475520}
   toPosition: {fileID: 454162966}
@@ -640,7 +641,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 919293150}
   replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: 05ccd53483a554ca9b31f685fa76154a, type: 3}
+  portrait: {fileID: 21300000, guid: 8b598e6a3c5553641846edc9663eca3f, type: 3}
   offset: 0
   fromPosition: {fileID: 938742593}
   toPosition: {fileID: 791605763}

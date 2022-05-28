@@ -168,7 +168,7 @@ public class SliderTimer : MonoBehaviour
         else
         {
             startTimer = true;
-            countdownText.text = "Precione ESPAÇO para parar!";
+            countdownText.text = "Pressione ESPAÇO para parar!";
         }
     }
 

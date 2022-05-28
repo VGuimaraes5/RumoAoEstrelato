@@ -441,8 +441,7 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 1269995708}
-  selectedCommands:
-  - {fileID: 1269995707}
+  selectedCommands: []
   variables:
   - {fileID: 1269995706}
   - {fileID: 1269995705}
@@ -939,8 +938,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 557
-    y: 165
+    x: 558
+    y: 166
     width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -995,7 +994,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 554
+    x: 555
     y: 29
     width: 128
     height: 40
@@ -1685,7 +1684,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 22106912}
   replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: 1f0584cc16da27b42b290594c973911f, type: 3}
+  portrait: {fileID: 21300000, guid: f1b2ba28926072d4ea968c165c56d5d5, type: 3}
   offset: 0
   fromPosition: {fileID: 0}
   toPosition: {fileID: 1888430123}
@@ -1727,7 +1726,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 112
-    y: 122
+    y: 123
     width: 119
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
